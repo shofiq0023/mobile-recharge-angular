@@ -1,0 +1,84 @@
+.main {
+    background: white;
+    height: 2400px;
+    width: 1080px;
+    color: #fff;
+    font-weight: 60;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+.topbar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    background: #fe0000;
+
+    padding: 0 55px;
+}
+.topbar .time {
+    font-weight: 600;
+}
+.topbar .battery-icon .percentage {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.back-button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 38px;
+    background: #fe0000;
+    color: white;
+    font-weight: 900;
+    padding: 55px 30px 100px 30px;
+}
+.back-button .back-button-icon {
+    margin-right: 45px;
+}
+
+
+.recharge-history {
+    font-family: 'Nunito', sans-serif;
+    background: #fff;
+    color: black;
+    padding: 70px 65px;
+    position: relative;
+    top: -70px;
+    border-radius: 50px 50px 0 0;
+    font-size: 34px;
+}
+.recharge-history .recharge-header {
+    color: #000;
+    font-weight: 800;
+}
+.recharge-history hr {
+    border: 3px solid grey;
+}
+.recharge-history .recharge-info {
+    margin-top: 35px;
+    margin-bottom: 45;
+}
+.recharge-history .recharge-info .recharge-btn {
+    font-size: 24px;
+    background: #fe0000;
+    padding: 25px 125px;
+    border-radius: 15px;
+    color: white;
+}
+.recharge-history .recharge-info .recharge-amount{
+    color: #fe0000;
+}
+
+.bottom-bar {
+    height: 45px;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+}
+.bottom-bar .navigation-bar {
+    height: 10px;
+    width: 400px;
+    background: #fff;
+    border-radius: 30px;
+}
