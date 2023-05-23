@@ -8,10 +8,10 @@ import * as htmlToImage from 'html-to-image';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'mobile-bill-angular';
+  bluetooth = false;
+  bluetoothConnected = false;
 
-  screenshotTime = "10:11 AM";
-  screenshotTimeDisplay = "10:11 AM"
+  screenshotTimeDisplay = new Date().toString();
   batteryPercentage = 61;
 
   faBatteryHalf = "fa-battery-half";
@@ -22,30 +22,13 @@ export class AppComponent implements OnInit {
 
   rechargeAmount = 1;
   mobileNumberPrefix = "+88";
-  mobileNumber = "01618638668";
+  mobileNumber = "01618638686";
   mobileNumberDisplay = this.mobileNumberPrefix + this.mobileNumber;
 
   rechargeInfo: RechargeInfo[] = [];
 
   ngOnInit(): void {
     this.updateRechargeCount();
-  }
-
-
-  public changeDisplayTime() {
-    let timeHour = parseInt(this.screenshotTime.substring(0, 2));
-    let timeMinute = this.screenshotTime.substring(3, 6);
-    let median = "AM";
-
-    if (timeHour > 12) {
-      median = "PM";
-      timeHour -= 12;
-    }
-
-    if (timeHour < 10) {
-      let newTimeHour = "0" + timeHour.toString();
-      this.screenshotTimeDisplay = newTimeHour + ":" + timeMinute + " " + median;
-    }
   }
 
   public changeBatteryPercentage() {
@@ -87,5 +70,26 @@ export class AppComponent implements OnInit {
         link.click();
       })
       .catch(err => console.log("Oops, something went wrong!", err));
+  }
+
+  public updateBluetoothOption(option: number) {
+    if (option == 0) {
+      this.bluetooth = false;
+      this.bluetoothConnected = false;
+    } else if (option == 1) {
+      this.bluetooth = true;
+      this.bluetoothConnected = false;
+    } else if (option == 2) {
+      this.bluetooth = false;
+      this.bluetoothConnected = true;
+    }
+    
+    console.log(this.bluetooth);
+    console.log(this.bluetoothConnected);
+  }
+
+  public updateBluetoothConnectedOption() {
+    this.bluetoothConnected != this.bluetoothConnected;
+    console.log(this.bluetoothConnected);
   }
 }
